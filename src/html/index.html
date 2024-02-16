@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Заголовок страницы</title>
+	<meta name="description" content="Описание страницы">
+	<!--
+	<meta property="og:title" content="Заголовок страницы">
+	<meta property="og:description" content="Описание страницы">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://site.ru">
+	<meta property="og:site_name" content="Avtoplam">
+	<meta property="og:image" content="./img/img.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary">
+	<meta name="theme-color" content="#292930">
+	-->
+	<!--
+	<link rel="canonical" href="https://site.ru">
+	<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+	-->
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+	<body class="body">
+		@@include('blocks/header.html')
+		<section class="hero">
+			<div class="container">
+				<h1 class="hero__title">Заголовок страницы h1</h1>
+			</div>
+		</section>
+
+		@@include('blocks/footer.html')
+		<script src="./js/index.js"></script>
+	</body>
+</html>
