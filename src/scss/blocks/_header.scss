@@ -12,6 +12,109 @@
 
 
 /*-------------------------------*/
+.header {
+	color: $gray-900;
+	padding: 22px 0;
+
+	&--white {
+		background-color: $white;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__nav {
+		margin-left: -50px;
+	}
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+
+	& p {
+		font-size: 1.69rem;
+		font-weight: 400;
+		color: $gray-900;
+		letter-spacing: 2px;
+	}
+
+	& span {
+		color: $primary;
+	}
+}
+
+.nav {
+	&__list{
+		display: flex;
+		font-weight: 700;
+		font-size: 1rem;
+		line-height: 160%;
+		color: $gray-800;
+	}
+
+	&__item {
+		padding: 5px;
+
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+
+		& :hover {
+			color: $primary;
+			transition: color 0.25s;
+		}
+	}
+
+
+}
+
+.header-conts {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	line-height: 150%;
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+		padding-left: 48px;
+		background-position: left center;
+		background-size: 40px 40px;
+		background-repeat: no-repeat;
+
+		&--phone {
+			background-image: url("../img/svg/call.svg");
+		}
+
+		&--mail {
+			background-image: url("../img/svg/mail.svg");
+		}
+
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+	&__img {
+		width: 40px;
+		height: 40px;
+		margin-right: 12px;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 0.88rem;
+		color: $gray-800;
+	}
+	&__value {
+		font-weight: 400;
+		font-size: 1.12rem;
+		color: $gray-900;
+	}
+}
+
 
 
 /*-------------------------------*/
