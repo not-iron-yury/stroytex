@@ -45,39 +45,74 @@ h1, h2, h3 {
 	font-weight: 700;
 	line-height: 130%;
 	color:$gray-900;
-	text-transform: uppercase;
+
 }
 h1 {
 	font-size: 4.5rem;
 	letter-spacing: 0.01em;
+	text-transform: uppercase;
 }
 
 h2 {
 	font-size: 2.88rem;
-	text-align: center;
 }
 
 h3 {
 	font-size: 1.75rem;
 	line-height: 150%;
+}
+
+h2, h3, .descr{
 	text-align: center;
+}
+
+.descr {
+	font-size: 1.12rem;
+	line-height: 150%;
 }
 /*-------------/titles---------------*/
 
 
 /*-------------buttons---------------*/
 
+.btn-large {
+	font-weight: 700;
+	font-size: 1rem;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: $white;
+	text-align: center;
+	border: 1px solid;
+	border-radius: 0.25rem;
+	padding: 14px 40px;
 
+	&--empty {
+		&-white {
+			border-color: $white;
 
+			&:hover{
+				color: $gray-800;
+				background-color: $white;
+				transition: all 0.3s;
+			}
 
+		}
+	}
 
+	&--fill {
+		&-primary {
+			border-color: $primary;
+			background-color: $primary;
 
+			&:hover{
+				color: $primary;
+				background-color: transparent;
+				transition: all 0.3s;
+			}
+		}
+	}
 
-
-
-
-
-
+}
 
 
 
