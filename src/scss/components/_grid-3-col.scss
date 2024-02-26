@@ -1,0 +1,39 @@
+.grid-3-col{
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__item {
+		&:nth-child(2) {
+			border-left: 1px solid transparent;
+			border-right: 1px solid transparent;
+			border-image: linear-gradient($gray-100, $gray-400, $gray-400, $gray-100);
+			border-image-slice: 1;
+		}
+
+		&-wrap{
+			max-width: 285px;
+			background-position: center top;
+			background-repeat: no-repeat;
+			padding-top: 74px;
+			margin: 0 auto;
+
+			&--quality {
+				background-image: url("/img/svg/ic-quality.svg");
+			}
+			&--safety {
+				background-image: url("/img/svg/ic-safety.svg");
+			}
+			&--comfort {
+				background-image: url("/img/svg/ic-comfort.svg");
+			}
+		}
+	}
+
+	&__subdesc {
+		text-align: center;
+	}
+}
