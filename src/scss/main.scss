@@ -1,11 +1,13 @@
 @import "./base";
 /* Blocks */
 @import "./blocks/header";
-@import "./blocks/hero";
-@import "./blocks/hpvideo";
+@import "./blocks/homepage/hero";
+@import "./blocks/homepage/video";
 @import "./components/videoblock";
-@import "./blocks/advantages";
+@import "./blocks/homepage/advantages";
 @import "./components/grid-3-col";
+@import "./blocks/homepage/more";
+@import "./blocks/homepage/ourservices";
 
 
 
