@@ -1,11 +1,240 @@
+.icon {
+	&--constr {
+		background-image: url("/img/svg/ic-constr.svg");
+	}
+	&--project {
+		background-image: url("/img/svg/ic-project.svg");
+	}
+	&--design {
+		background-image: url("/img/svg/ic-design.svg");
+	}
+	&--repairs {
+		background-image: url("/img/svg/ic-repairs.svg");
+	}
+}
+
 .ourservices {
-	background-color: $gray-500;
 	background-image: url("../img/ourservices-bg.jpg");
+	background-color: $gray-500;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-top: 1px solid $gray-100;
 	border-bottom: 1px solid $gray-100;
+	padding: 215px 0 80px;
 
-	padding: 212px 0 80px;
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 285px;
+		height: 285px;
+		background: $white;
+		color: $gray-100;
+
+		box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
+					0 12px 10px -6px rgba(154, 156, 165, 0.04),
+					0 30px 24px -10px rgba(154, 156, 165, 0.05),
+					0 80px 80px -20px rgba(154, 156, 165, 0.08);
+		h3 {
+			color: $gray-800;
+		}
+
+		&:hover {
+			& h3 {
+				color: $white;
+				transition: all 0.25s;
+			}
+			& .icon {
+				background-image: none;
+				transition: all 0.25s;
+			}
+		}
+
+		&--constr{
+			&:hover div{
+				padding-top: 15px;
+				transition: all 0.25s;
+			}
+
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				border-radius: 0.25rem;
+				background-image: url("../img/hp-constr.jpg");;
+				opacity: 0;
+				transition: opacity 0.5s ease;
+			}
+			&:hover::before,
+			&:active::before{
+				opacity: 1;
+				transition: opacity 0.5s ease;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				border-radius: 0.25rem;
+				background-color: $gray-900;
+				opacity: 0;
+				transition: opacity 0.2s ease;
+			}
+			&:hover::after,
+			&:active::after{
+				opacity: 0.5;
+				transition: opacity 0.2s ease;
+			}
+		}
+
+		&--project {
+			&:hover div{
+				padding-top: 15px;
+				transition: all 0.25s;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				border-radius: 0.25rem;
+				background-image: url("../img/hp-project.jpg");;
+				opacity: 0;
+				transition: opacity 0.5s ease;
+			}
+			&:hover::before,
+			&:active::before{
+				opacity: 1;
+				transition: opacity 0.5s ease;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				border-radius: 0.25rem;
+				background-color: $gray-900;
+				opacity: 0;
+				transition: opacity 0.2s ease;
+			}
+			&:hover::after,
+			&:active::after{
+				opacity: 0.5;
+				transition: opacity 0.2s ease;
+			}
+		}
+
+		&--design{
+			&:hover div{
+				padding-top: 15px;
+				transition: all 0.25s;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				border-radius: 0.25rem;
+				background-image: url("../img/hp-design.jpg");;
+				opacity: 0;
+				transition: opacity 0.5s ease;
+			}
+			&:hover::before,
+			&:active::before{
+				opacity: 1;
+				transition: opacity 0.5s ease;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				border-radius: 0.25rem;
+				background-color: $gray-900;
+				opacity: 0;
+				transition: opacity 0.2s ease;
+			}
+			&:hover::after,
+			&:active::after{
+				opacity: 0.5;
+				transition: opacity 0.2s ease;
+			}
+		}
+
+		&--repairs{
+			&:hover div{
+				padding-top: 15px;
+				transition: all 0.25s;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				border-radius: 0.25rem;
+				background-image: url("../img/hp-repairs.jpg");;
+				opacity: 0;
+				transition: opacity 0.5s ease;
+			}
+			&:hover::before,
+			&:active::before{
+				opacity: 1;
+				transition: opacity 0.5s ease;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				border-radius: 0.25rem;
+				background-color: $gray-900;
+				opacity: 0;
+				transition: opacity 0.2s ease;
+			}
+			&:hover::after,
+			&:active::after{
+				opacity: 0.5;
+				transition: opacity 0.2s ease;
+			}
+		}
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__item-body {
+		position: relative;
+		padding-top: 75px;
+		z-index: 10;
+	}
 }
+

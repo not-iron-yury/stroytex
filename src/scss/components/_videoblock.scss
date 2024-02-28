@@ -1,7 +1,6 @@
 .video-block {
 	position: relative;
 	overflow: hidden;
-	border-radius: 4px;
 	height: 500px;
 
 	&::before {
@@ -22,10 +21,18 @@
 
 		width: 80px;
 		height: 80px;
-		border-radius: 100%;
+		border-radius: 50%;
 
 		transform: translate(-50%, -50%);
 		z-index: 10;
+
+		box-shadow: none;
+		transition: box-shadow 0.3s;
+
+		&:hover {
+			box-shadow: 0px 0px 14px 14px rgba(249, 0, 0, 0.3);
+			transition: box-shadow 0.3s;
+		}
 	}
 
 	&__mute {
