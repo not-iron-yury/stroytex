@@ -6,7 +6,6 @@ const htmlclean = require('gulp-htmlclean');
 const webpHTML = require('gulp-webp-html');
 const typograf = require('gulp-typograf');
 
-
 // SASS
 const sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
@@ -16,14 +15,17 @@ const webpCss = require('gulp-webp-css');
 const sourceMaps = require('gulp-sourcemaps');
 const groupMedia = require('gulp-group-css-media-queries');
 
-
+// other
 const server = require('gulp-server-livereload');
 const clean = require('gulp-clean');
 const fs = require('fs');
-const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
-const babel = require('gulp-babel');
+const plumber = require('gulp-plumber');
 const changed = require('gulp-changed');
+
+// JS
+const babel = require('gulp-babel');
+const jsmin = require('gulp-jsmin');
 
 // Images
 //const imagemin = require('gulp-imagemin');
@@ -56,7 +58,8 @@ const plumberNotify = (title) => {
 
 gulp.task('html:docs', function () {
 	return gulp
-		.src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
+		//.src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
+		.src('./src/html/*.html')
 		.pipe(changed('./docs/'))
 		.pipe(plumber(plumberNotify('HTML')))
 		.pipe(fileInclude(fileIncludeSetting))
@@ -109,6 +112,7 @@ gulp.task('js:docs', function () {
 		.pipe(changed('./docs/js/'))
 		.pipe(plumber(plumberNotify('JS')))
 		.pipe(babel())
+		.pipe(jsmin())
 		.pipe(gulp.dest('./docs/js/'));
 });
 

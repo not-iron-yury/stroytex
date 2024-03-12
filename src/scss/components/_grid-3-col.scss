@@ -1,0 +1,45 @@
+.grid-3-col{
+	&__body {
+		display: grid;
+		grid-template-columns: 0.8fr 1fr 0.8fr;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__item {
+		&:nth-child(1) {
+			padding-right: 15%;
+		}
+		&:nth-child(2) {
+			border-left: 1px solid transparent;
+			border-right: 1px solid transparent;
+			border-image: linear-gradient($gray-100, $gray-400, $gray-400, $gray-100);
+			border-image-slice: 1;
+		}
+		&:nth-child(3) {
+			padding-left: 15%;
+		}
+
+		&-wrap{
+			max-width: 285px;
+			padding-top: 74px;
+			margin: 0 auto;
+		}
+	}
+
+	&__subdesc {
+		text-align: center;
+	}
+}
+
+.icon {
+	&--quality {
+		background-image: url("/img/svg/ic-quality.svg");
+	}
+	&--safety {
+		background-image: url("/img/svg/ic-safety.svg");
+	}
+	&--comfort {
+		background-image: url("/img/svg/ic-comfort.svg");
+	}
+}

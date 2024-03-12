@@ -1,22 +1,30 @@
 /*--------------base---------------*/
+.container {
+	max-width: 1260px;		// 1230px
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
 .body{
 	display: flex;
 	flex-direction: column;
 	min-width: 320px;
 	min-height: 100vh;
-	background-color: $white;
-	color: $text;
-	font-family: $font-family;
+	background-color: $white;		// background color
+
+
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
+	line-height: 160%;
+	color: $gray-700;				// text color
+
 	scroll-behavior: smooth;
 }
-
 
 .lock {
 	overflow: hidden;
 }
-
 
 .sr-only {
 	position: absolute;
@@ -29,3 +37,50 @@
 }
 
 /*-------------/base---------------*/
+
+/*-------------titles---------------*/
+
+
+h1, h2, h3, .subtitle {
+	font-weight: 700;
+	color:$gray-900;
+
+}
+h1 {
+	font-size: 4.5rem;
+	line-height: 130%;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2.88rem;
+	line-height: 130%;
+	margin-bottom: 24px;
+}
+
+h3 {
+	font-size: 1.25rem;
+	line-height: 150%;
+	margin-bottom: 8px
+}
+
+.subtitle {
+	font-size: 1.75rem;
+	line-height: 150%;
+}
+
+h2, h3, .descr{
+	text-align: center;
+}
+
+.descr {
+	font-size: 1.12rem;
+	line-height: 150%;
+	margin-bottom: 60px;
+}
+/*-------------/titles---------------*/
+
+.bor {
+	border-radius: 0.25rem;
+}

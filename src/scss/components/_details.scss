@@ -1,0 +1,18 @@
+.details {
+	display: flex;
+	align-items: center;
+	max-width: 725px;
+	margin: 80px auto 0;
+
+	&__subtitle {
+		margin-right: 40px;
+	}
+	&__link{
+		display: inline-block;
+
+	}
+
+	a {
+		color: $white;
+	}
+}

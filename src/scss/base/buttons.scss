@@ -1,0 +1,101 @@
+/*--------- base ---------*/
+.btn {
+	border-radius: 0.25rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+
+/*--------- colors ---------*/
+	&-orange{
+		color: $white;
+		background-color: $primary;
+		border: 1px solid $primary;
+
+		&:hover{
+			color: $primary;
+			background-color: transparent;
+			transition: all 0.3s;
+		}
+	}
+
+	&-light{
+		color: $primary;
+		background-color: transparent;
+		border: 1px solid $primary;
+
+		&:hover{
+			color: $white;
+			background-color: $primary;
+			transition: all 0.3s;
+		}
+	}
+
+	&-white{
+		color: $white;
+		background-color: transparent;
+		border: 1px solid $white;
+
+		&:hover{
+			color: $gray-800;
+			background-color: $white;
+			transition: all 0.3s;
+		}
+	}
+
+/*--------- sizes ---------*/
+	&--large{
+		padding: 0 40px;
+		font-size: 1rem;
+		line-height: 325%;
+		letter-spacing: 0.03em;
+	}
+
+	&--regular {
+		padding: 0 32px;
+		font-size: 0.875rem;
+		line-height: 300%;
+		letter-spacing: 0.04em;
+	}
+
+	&--small {
+		padding: 0 24px;
+		font-size: 0.75rem;
+		line-height: 300%;
+		letter-spacing: 0.04em;
+	}
+}
+
+/*--------- slider ---------*/
+.btn-slider {
+	width: 48px;
+	height: 48px;
+	border-radius: 100%;
+
+	&--next {
+		background-color: $white;
+		background-image: url("../img/svg/arrow-prev.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		transform: rotate(180deg);
+
+		&:hover {
+			background-color: $primary;
+			background-image: url("../img/svg/arrow-next.svg");
+			transform: rotate(0deg);
+		}
+	}
+
+	&--prev {
+		background-color: $white;
+		background-image: url("../img/svg/arrow-prev.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+
+		&:hover {
+			background-color: $primary;
+			background-image: url("../img/svg/arrow-next.svg");
+			transform: rotate(180deg);
+		}
+	}
+}
+

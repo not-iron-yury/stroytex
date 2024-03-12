@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стройтех Конструкции</title>
+  <meta name="description" content="Описание страницы">
+  <!--
+	<meta property="og:title" content="Заголовок страницы">
+	<meta property="og:description" content="Описание страницы">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://site.ru">
+	<meta property="og:site_name" content="Avtoplam">
+	<meta property="og:image" content="./img/img.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary">
+	<meta name="theme-color" content="#292930">
+	-->
+  <!--
+	<link rel="canonical" href="https://site.ru">
+	<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+	-->
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="body">
+  <header class="header header--white">
+    <div class="container header__container">
+      <a class="logo" href="/">
+        <p>
+          <span>СТРОЙ</span>ТЕХ
+        </p>
+      </a>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Услуги</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Наши работы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Новости</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__contacts header-conts">
+        <a href="tel:89495550128" class="header-conts__link header-conts__link--phone">
+          <p class="header-conts__title">Наш телефон</p>
+          <p class="header-conts__value">8 (949) 555-0128</p>
+        </a>
+        <a href="mailto:hello@stroytex.ru" class="header-conts__link header-conts__link--mail">
+          <p class="header-conts__title">Наша почта</p>
+          <p class="header-conts__value">hello@stroytex.ru</p>
+        </a>
+      </div>
+      <!--
+				<button class="burger burger--active" aria-label="Открыть меню" aria-expanded="false">
+					<span class="burger__line"></span>
+				</button>
+			-->
+
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title hero__title--white">
+          <span>Строй</span>тех констркуции
+        </h1>
+        <p class="hero__desc hero__desc--white">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Рот, путь курсивных которое, взгляд щеке оксмокс назад его инициал кек.</p>
+        <div class="hero__btns">
+          <button class="btn btn-white btn--large">Подробней о нас</button>
+          <button class="btn btn-orange btn--large">Оставить заявку</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hpvideo">
+    <div class="container">
+      <h2 class="hpvideo__title">Мы строительно конструкторское бюро</h2>
+      <p class="hpvideo__descr descr">По праву считаемся лучшей строительной компанией в России.</p>
+      <div class="video-block bor">
+        <button class="video-block__play" aria-label="включить видео">
+          <img src="../img/svg/play.svg" alt="вкл видео">
+        </button>
+        <button class="video-block__mute" aria-label="выключить звук видео">
+          <img src="../img/svg/mute.svg" alt="выкл звук">
+        </button>
+        <video class="video-block__video" src="../files/homepage.mp4" muted loop preload="metadata"></video>
+      </div>
+    </div>
+  </section>
+  <section class="advantages">
+    <div class="container">
+      <h2 class="advantages__title">Наши преимущества</h2>
+      <p class="advantages__desc descr">Наша миссия — устанавливать самые высокие стандарты в сфере строительства.</p>
+      <ul class="grid-3-col__body ">
+        <li class="grid-3-col__item">
+          <div class="grid-3-col__item-wrap icon icon--quality">
+            <h3 class="grid-3-col__subtitle">Качество</h3>
+            <p class="grid-3-col__subdesc">Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+          </div>
+        </li>
+        <li class="grid-3-col__item">
+          <div class="grid-3-col__item-wrap icon icon--safety">
+            <h3 class="grid-3-col__subtitle">Безопасность</h3>
+            <p class="grid-3-col__subdesc">Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+          </div>
+        </li>
+        <li class="grid-3-col__item">
+          <div class="grid-3-col__item-wrap icon icon--comfort">
+            <h3 class="grid-3-col__subtitle">Комфорт</h3>
+            <p class="grid-3-col__subdesc">Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="more">
+    <div class="container more__container bor">
+      <p class="more__title subtitle">Хотите узнать больше? Оставьте заявку:</p>
+      <form action="#" class="more__form form form-row" method="get">
+        <label class="form__lable form-row__lable--small">
+          <p class="form__caption">Имя:</p>
+          <input class="form__input" type="text" name="name" id="name" placeholder="Ваше имя" required>
+        </label>
+        <label class="form__lable form-row__lable--small">
+          <p class="form__caption">Телефон:</p>
+          <input class="form__input" type="phone" name="phone" id="phone" placeholder="Ваш телефон" required>
+        </label>
+        <label class="form__lable form-row__lable--big">
+          <p class="form__caption">Сообщение:</p>
+          <input class="form__input" type="text" name="text" id="text" placeholder="Ваш вопрос" required>
+        </label>
+        <button class="btn btn-orange btn--regular" type="submit">Отправить</button>
+      </form>
+    </div>
+  </section>
+  <section class="ourservices">
+    <div class="container">
+      <h2 class="ourservices__title">Наши услуги</h2>
+      <p class="ourservices__desc descr">Строительное бюро Стройтех — это строительный гигант, предоставляющий полный спектр строительных услуг.</p>
+      <ul class="ourservices__list">
+        <li class="ourservices__li bor">
+          <a href="#" class="ourservices__item ourservices__item--constr bor">
+            <div class="ourservices__item-body icon icon--constr">
+              <h3 class="ourservices__title">Строительство</h3>
+            </div>
+          </a>
+        </li>
+        <li class="ourservices__li bor">
+          <a href="#" class="ourservices__item ourservices__item--project bor">
+            <div class="ourservices__item-body icon icon--project">
+              <h3 class="ourservices__title">Проектирование</h3>
+            </div>
+          </a>
+        </li>
+        <li class="ourservices__li bor">
+          <a href="#" class="ourservices__item ourservices__item--design bor">
+            <div class="ourservices__item-body icon icon--design">
+              <h3 class="ourservices__title">Дизайн интерьера</h3>
+            </div>
+          </a>
+        </li>
+        <li class="ourservices__li bor">
+          <a href="#" class="ourservices__item ourservices__item--repairs bor">
+            <div class="ourservices__item-body icon icon--repairs">
+              <h3 class="ourservices__title">Ремонт</h3>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="ourservices__details details">
+        <p class="details__subtitle subtitle">Узнайте больше о наших услугах</p>
+        <a href="#" class="details__link btn btn-orange btn--large">Подробней</a>
+      </div>
+    </div>
+  </section>
+  <section class="portfolio">
+    <div class="container portfolio__container">
+      <div class="portfolio__slider slider">
+        <div class="slider__top">
+          <h2 class="portfolio__title">Просмотрите наши проекты и узнайте больше о нас</h2>
+          <div class="slider__buttons">
+            <button class="btn-slider btn-slider--prev" aria-label="предыдущий слайд"></button>
+            <button class="btn-slider btn-slider--next" aria-label="предыдущий слайд"></button>
+          </div>
+        </div>
+        <ul class="swiper slider__body">
+          <div class="swiper-wrapper">
+            <li class="swiper-slide slider__item bor">
+              <img class="slider__img" src="./img/portfolio/slide-1.jpg" alt="Красный шпиль">
+              <div class="slider__content">
+                <h3 class="slider__subtitle">Красный шпиль</h3>
+                <p class="slider__descr">Бизнес центр</p>
+                <a class="slider__link btn btn-light btn--regular" href="#">Подробней</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__item bor">
+              <img class="slider__img" src="./img/portfolio/slide-2.jpg" alt="Кубики">
+              <div class="slider__content">
+                <h3 class="slider__subtitle">Кубики</h3>
+                <p class="slider__descr">Бизнес центр</p>
+                <a class="slider__link btn btn-light btn--regular" href="#">Подробней</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__item bor">
+              <img class="slider__img" src="./img/portfolio/slide-3.jpg" alt="Карандаш">
+              <div class="slider__content">
+                <h3 class="slider__subtitle">Карандаш</h3>
+                <p class="slider__descr">Жилищный комплекс</p>
+                <a class="slider__link btn btn-light btn--regular" href="#">Подробней</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__item bor">
+              <img class="slider__img" src="./img/portfolio/slide-3.jpg" alt="Карандаш">
+              <div class="slider__content">
+                <h3 class="slider__subtitle">Карандаш</h3>
+                <p class="slider__descr">Жилищный комплекс</p>
+                <a class="slider__link btn btn-light btn--regular" href="#">Подробней</a>
+              </div>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <div class="portfolio__details details">
+        <p class="details__subtitle subtitle">Информация о наших проектах</p>
+        <a href="#" class="details__link btn btn-orange btn--large">Подробней</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__container">
+
+    </div>
+  </footer>
+  <script src="./js/index.js"></script>
+  <script src="./js/vendors.js"></script>
+</body>
+
+</html>

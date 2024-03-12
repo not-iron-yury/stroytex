@@ -12,6 +12,8 @@ const babel = require('gulp-babel');
 const changed = require('gulp-changed');
 const typograf = require('gulp-typograf');
 const gcmq = require('gulp-group-css-media-queries');
+const { formatHTML } = require(`gulp-format-html`);
+
 
 gulp.task('clean:dev', function (done) {
 	if (fs.existsSync('./build/')) {
@@ -40,11 +42,13 @@ const plumberNotify = (title) => {
 gulp.task('html:dev', function () {
 	return (
 		gulp
-			.src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
+			//.src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
+			.src('./src/html/*.html')
 			.pipe(changed('./build/', { hasChanged: changed.compareContents }))
 			.pipe(plumber(plumberNotify('HTML')))
 			.pipe(fileInclude(fileIncludeSetting))
 			.pipe(typograf({ locale: ['ru', 'en-US'] }))
+			.pipe(formatHTML())
 			.pipe(gulp.dest('./build/'))
 	);
 });
@@ -90,7 +94,6 @@ gulp.task('js:dev', function () {
 		.src('./src/js/*.js')
 		.pipe(changed('./build/js/'))
 		.pipe(plumber(plumberNotify('JS')))
-		//.pipe(babel())
 		.pipe(gulp.dest('./build/js/'));
 });
 
