@@ -1,0 +1,90 @@
+.slider {
+	
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: end;
+		margin-bottom: 35px;
+	}
+	&__title {
+		margin: 0;
+	}
+
+	&__buttons {
+		position: relative;
+		right: -13px;
+		display: flex;
+		padding-bottom: 13px;
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item {
+		display: flex;
+		height: 440px;
+		flex-direction: column;
+		align-items: center;
+		overflow: hidden;
+		cursor: pointer;
+		box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
+					0 12px 10px -6px rgba(154, 156, 165, 0.04),
+					0 30px 24px -10px rgba(154, 156, 165, 0.05),
+					0 50px 50px -20px rgba(154, 156, 165, 0.08);
+		&:hover {
+			box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.05),
+						0 12px 10px -6px rgba(154, 156, 165, 0.08),
+						0 30px 24px -10px rgba(154, 156, 165, 0.1),
+						0 50px 50px -20px rgba(154, 156, 165, 0.16);
+
+
+						& .slider__content {
+							bottom: 67px;
+							transition: bottom 0.4s;
+						}
+		}
+	}
+	&__img {
+		width: 100%;
+	}
+	&__content {
+		position: relative;
+		bottom: 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		background-color: $white;
+		padding: 16px 10px 20px;
+		transition: bottom 0.4s;
+		
+		// &:hover {
+		// 	bottom: 67px;
+		// 	transition: bottom 0.4s;
+		// 	}
+	}
+	&__descr {
+		font-size: 0.88rem;
+		line-height: 150%;
+		text-align: center;
+
+	}
+	&__link {
+		margin-top: 24px;
+	}
+	a {
+		color: $primary;
+	}
+}
+
+
+.swiper-wrapper {
+	padding-bottom: 80px;
+}
+.portfolio .details {
+	margin-top: 0;
+} 

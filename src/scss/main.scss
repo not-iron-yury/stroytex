@@ -1,16 +1,23 @@
 @import "./base";
+
 /* Blocks */
 @import "./blocks/header";
+@import "./blocks/footer";
 @import "./blocks/homepage/hero";
 @import "./blocks/homepage/video";
-@import "./components/videoblock";
 @import "./blocks/homepage/advantages";
-@import "./components/grid-3-col";
 @import "./blocks/homepage/more";
 @import "./blocks/homepage/ourservices";
+@import "./blocks/homepage/portfolio";
+
+
+/* Components */
+@import "./components/videoblock";
 @import "./components/details";
+@import "./components/grid-3-col";
+@import "./components/form-row";
+@import "./components/slider-portfolio";
 
 
-@import "./blocks/footer";
-
-
+/* Vendors */
+@import "./vendors/swiper.min"; 
