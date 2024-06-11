@@ -1,0 +1,55 @@
+/*================ base ================*/
+.btn {
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.04em;
+}
+
+/*================ color ================*/
+.btn--primary {
+	color: $white;
+	border: 1px solid $primary;
+	background: $primary;
+
+	&:hover {
+		color: $primary;
+		background: transparent;
+		transition: all 0.3s;
+	}
+}
+
+.btn--white {
+	color: $primary;
+	border: 1px solid $primary;
+	background: $white;
+
+	&:hover {
+		color: $white;
+		background: $primary;
+		transition: all 0.3s;
+	}
+}
+
+/*================ size ================*/
+.btn--large {
+	max-width: 210px;
+	font-size: 16px;
+	line-height: 325%;
+	letter-spacing: 0.03em;
+	padding: 0px 40px;
+}
+
+.btn--reg {
+	max-width: 195px;
+	font-size: 14px;
+	line-height: 314%;
+	padding: 0px 32px;
+}
+
+.btn--small {
+	max-width: 150px;
+	font-size: 12px;
+	line-height: 300%;
+	padding: 0px 24px;
+}

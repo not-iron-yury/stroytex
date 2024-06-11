@@ -1,5 +1,5 @@
 /*--------------base---------------*/
-.body{
+.body {
 	display: flex;
 	flex-direction: column;
 	min-width: 320px;
@@ -12,11 +12,9 @@
 	scroll-behavior: smooth;
 }
 
-
 .lock {
 	overflow: hidden;
 }
-
 
 .sr-only {
 	position: absolute;
