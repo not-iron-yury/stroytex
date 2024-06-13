@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Заголовок страницы</title>
+		<title>СТРОЙТЕХ Конструкции</title>
 		<meta name="description" content="Описание страницы" />
 		<!--
 	<meta property="og:title" content="Заголовок страницы">
@@ -16,24 +16,19 @@
 	<meta property="og:image:type" content="image/jpeg">
 	<meta name="twitter:card" content="summary">
 	<meta name="theme-color" content="#292930">
-	-->
+		-->
+
 		<!--
 	<link rel="canonical" href="https://site.ru">
 	<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
 	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
-	-->
+		-->
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 	<body class="body">
 		@@include('blocks/header.html')
-		<main>
-			<section class="hero">
-				<div class="container">
-					<h1 class="hero__title">Заголовок страницы h1</h1>
-				</div>
-			</section>
-		</main>
+		<main>@@include('homepage/hero.html')</main>
 		@@include('blocks/footer.html')
 		<script src="./js/index.js"></script>
 	</body>

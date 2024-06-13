@@ -4,6 +4,8 @@
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 0.04em;
+	text-wrap: nowrap;
+	border-radius: 4px;
 }
 
 /*================ color ================*/
@@ -30,10 +32,21 @@
 		transition: all 0.3s;
 	}
 }
+.btn--transparent {
+	color: $white;
+	border: 1px solid $white;
+	background: transparent;
+
+	&:hover {
+		color: $primary;
+		border: 1px solid $primary;
+		transition: all 0.3s;
+	}
+}
 
 /*================ size ================*/
 .btn--large {
-	max-width: 210px;
+	//max-width: 210px;
 	font-size: 16px;
 	line-height: 325%;
 	letter-spacing: 0.03em;
