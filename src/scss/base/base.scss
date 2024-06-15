@@ -4,11 +4,13 @@
 	flex-direction: column;
 	min-width: 320px;
 	min-height: 100vh;
-	background-color: $white;
-	color: $text;
+
 	font-family: $font-family;
 	font-size: 16px;
 	font-weight: 400;
+
+	color: $gray-700;
+	background-color: $white;
 	scroll-behavior: smooth;
 }
 
@@ -26,4 +28,54 @@
 	white-space: nowrap;
 }
 
-/*-------------/base---------------*/
+/*---------------/base---------------*/
+
+/*--------------titles and descriptions--------------*/
+.title-h1,
+.title-h2,
+.title-h3 {
+	font-weight: 700;
+	color: $gray-900;
+}
+.title-h2--center,
+.title-h3--center {
+	text-align: center;
+}
+.title-h1 {
+	line-height: 130%;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	font-size: 72px;
+
+	&--small {
+		font-size: 64px;
+		line-height: 120%;
+		letter-spacing: 0.02em;
+	}
+}
+.title-h2 {
+	font-size: 46px;
+	line-height: 130%;
+}
+.title-h3 {
+	font-size: 20px;
+	line-height: 150%;
+}
+
+.descr-h1,
+.descr-h2 {
+	line-height: 150%;
+}
+.descr-20 {
+	font-size: 20px;
+}
+.descr-18 {
+	font-size: 18px;
+	text-align: center;
+}
+.descr-16 {
+	font-size: 16px;
+	line-height: 160%;
+	text-align: center;
+}
+/*-------------/titles and descriptions--------------*/

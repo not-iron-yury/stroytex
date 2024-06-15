@@ -1,20 +1,20 @@
 .hero {
-	background-image: url("../../img/bg-image.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 220px 0 320px;
-	padding: 15.1% 0 22.2%;
+
+	&--main {
+		// color: $white;
+		background-image: url("../../img/bg-image.jpg");
+		max-height: 988px;
+		padding: 13.2% 0 18.6%;
+	}
 
 	&__content {
-		max-width: 600px;
+		max-width: 610px;
+		padding: 5px;
 	}
 	&__title {
-		font-weight: 700;
-		font-size: 72px;
 		color: $white;
-		line-height: 120%;
-		letter-spacing: 0.01em;
-		text-transform: uppercase;
 		margin-bottom: 24px;
 
 		& span {
@@ -23,8 +23,6 @@
 	}
 	&__descr {
 		color: $white;
-		font-size: 20px;
-		line-height: 150%;
 		margin-bottom: 60px;
 	}
 	&__buttons {
