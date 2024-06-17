@@ -1,14 +1,16 @@
 .about-section {
 	&__container {
-		padding: 120px 15px 270px;
+		padding: 120px 15px 180px;
+		text-align: center;
 	}
 }
 
-/*--------------video-------------*/
-.video-block {
-	padding: 70px 0;
+.core-values {
+	text-align: center;
+	margin-bottom: 270px;
 }
 
+/*--------------video-------------*/
 .video-wrapp {
 	max-width: 700px;
 	margin: 0 auto;
@@ -57,5 +59,4 @@
 	fill: #ff0000;
 	fill-opacity: 1;
 }
-
 /*-------------/video-------------*/

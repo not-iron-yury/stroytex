@@ -14,15 +14,12 @@
 	}
 	&__title {
 		color: $white;
-		margin-bottom: 24px;
-
 		& span {
 			color: $primary;
 		}
 	}
 	&__descr {
 		color: $white;
-		margin-bottom: 60px;
 	}
 	&__buttons {
 		& :not(:last-child) {
