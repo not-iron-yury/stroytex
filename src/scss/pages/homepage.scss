@@ -1,0 +1,31 @@
+.about-section {
+	&__container {
+		padding: 120px 15px 180px;
+		text-align: center;
+	}
+}
+.core-values {
+	text-align: center;
+	&__list {
+		margin-bottom: 36px;
+	}
+	&__form {
+		position: relative;
+		top: 91px;
+	}
+}
+
+.services {
+	text-align: center;
+	padding-top: 212px;
+	padding-bottom: 80px;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		270deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(240, 241, 243, 0.5018382352941176) 12%,
+		rgba(240, 241, 243, 1) 50%,
+		rgba(240, 241, 243, 0.5018382352941176) 88%,
+		rgba(255, 255, 255, 1) 100%
+	);
+}

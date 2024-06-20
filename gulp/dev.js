@@ -5,7 +5,6 @@ const sassGlob = require("gulp-sass-glob");
 const server = require("gulp-server-livereload");
 const clean = require("gulp-clean");
 const fs = require("fs");
-const sourceMaps = require("gulp-sourcemaps");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
 const babel = require("gulp-babel");
@@ -38,13 +37,16 @@ const plumberNotify = (title) => {
 };
 
 gulp.task("html:dev", function () {
-	return gulp
-		.src(["./src/html/**/*.html", "!./src/html/blocks/*.html"])
-		.pipe(changed("./build/", { hasChanged: changed.compareContents }))
-		.pipe(plumber(plumberNotify("HTML")))
-		.pipe(fileInclude(fileIncludeSetting))
-		.pipe(typograf({ locale: ["ru", "en-US"] }))
-		.pipe(gulp.dest("./build/"));
+	return (
+		gulp
+			// .src(["./src/html/**/*.html", "!./src/html/blocks/*.html"])
+			.src("./src/html/*.html")
+			.pipe(changed("./build/", { hasChanged: changed.compareContents }))
+			.pipe(plumber(plumberNotify("HTML")))
+			.pipe(fileInclude(fileIncludeSetting))
+			.pipe(typograf({ locale: ["ru", "en-US"] }))
+			.pipe(gulp.dest("./build/"))
+	);
 });
 
 gulp.task("sass:dev", function () {
@@ -52,11 +54,9 @@ gulp.task("sass:dev", function () {
 		.src("./src/scss/*.scss")
 		.pipe(changed("./build/css/"))
 		.pipe(plumber(plumberNotify("SCSS")))
-		.pipe(sourceMaps.init())
 		.pipe(sassGlob())
 		.pipe(sass())
 		.pipe(gcmq())
-		.pipe(sourceMaps.write())
 		.pipe(gulp.dest("./build/css/"));
 });
 

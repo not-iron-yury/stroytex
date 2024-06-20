@@ -1,5 +1,6 @@
 /*================ base ================*/
 .btn {
+	display: inline-block;
 	font-weight: 700;
 	text-transform: uppercase;
 	text-align: center;
@@ -46,7 +47,8 @@
 
 /*================ size ================*/
 .btn--large {
-	//max-width: 210px;
+	//max-width: 212px;
+	height: 52px;
 	font-size: 16px;
 	line-height: 325%;
 	letter-spacing: 0.03em;
@@ -55,6 +57,7 @@
 
 .btn--reg {
 	max-width: 195px;
+	height: 44px;
 	font-size: 14px;
 	line-height: 314%;
 	padding: 0px 32px;
@@ -62,6 +65,7 @@
 
 .btn--small {
 	max-width: 150px;
+	height: 36px;
 	font-size: 12px;
 	line-height: 300%;
 	padding: 0px 24px;

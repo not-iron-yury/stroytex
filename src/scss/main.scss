@@ -3,5 +3,13 @@
 @import "./blocks/header";
 @import "./blocks/footer";
 @import "./blocks/hero";
-@import "./blocks/about-section";
+@import "./blocks/video";
 @import "./blocks/col-3";
+
+/* UI */
+@import "./UI/Buttons";
+@import "./UI/Form";
+@import "./UI/White-block";
+
+/* Pages */
+@import "./pages/homepage";
