@@ -31,22 +31,22 @@
 		max-width: 285px;
 		width: 100%;
 		height: 285px;
-		background-image: url("./../../img/noimage.jpg");
+		background-image: url("./../../img/services/noimage.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
 
 		&--1:hover {
-			background-image: url("./../../img/construction.jpg");
+			background-image: url("./../../img/services/construction.jpg");
 		}
 		&--2:hover {
-			background-image: url("./../../img/project.jpg");
+			background-image: url("./../../img/services/project.jpg");
 		}
 		&--3:hover {
-			background-image: url("./../../img/interior.jpg");
+			background-image: url("./../../img/services/interior.jpg");
 		}
 		&--4:hover {
-			background-image: url("./../../img/repairs.jpg");
+			background-image: url("./../../img/services/repairs.jpg");
 		}
 
 		&:hover {
@@ -78,10 +78,17 @@
 				fill: white;
 				z-index: 2;
 			}
+			&__link-item {
+				z-index: 2;
+			}
 		}
 	}
-
 	&__link {
+		width: 100%;
+		height: 100%;
+	}
+	&__link-item {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -89,19 +96,6 @@
 		align-items: center;
 		justify-content: flex-end;
 		padding-bottom: 31.58%;
-
-		// &::before {
-		// 	position: relative;
-		// 	display: block;
-		// 	content: "";
-		// 	top: 0px;
-		// 	width: 53px;
-		// 	height: 52px;
-		// 	background-image: url("./../../img/svg/service/ic-construction.svg");
-		// 	background-repeat: no-repeat;
-		// 	background-size: cover;
-		// 	margin-bottom: 30px;
-		// }
 	}
 	& svg {
 		margin-bottom: 24px;

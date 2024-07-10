@@ -1,0 +1,10 @@
+.view-more {
+	display: block;
+	align-items: center;
+	margin: 80px auto 0;
+
+	& :first-child {
+		display: inline;
+		margin-right: 40px;
+	}
+}

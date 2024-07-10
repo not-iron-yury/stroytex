@@ -1,15 +1,19 @@
 @import "./base";
+
+/* UI */
+@import "./UI/buttons";
+@import "./UI/title-descr";
+@import "./UI/form";
+@import "./UI/white-block";
+@import "./UI/view-more";
+@import "./UI/card-project";
+
 /* Blocks */
 @import "./blocks/header";
 @import "./blocks/footer";
 @import "./blocks/hero";
 @import "./blocks/video";
 @import "./blocks/cor-values";
-
-/* UI */
-@import "./UI/buttons";
-@import "./UI/form";
-@import "./UI/white-block";
 
 /* Pages */
 @import "./pages/homepage";

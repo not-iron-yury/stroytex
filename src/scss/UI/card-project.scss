@@ -1,0 +1,38 @@
+.homepage-projects {
+	padding: 100px 15px;
+	//background-color: grey;
+}
+
+.project-card {
+	width: 390px;
+	height: 440px;
+	text-align: center;
+	background-color: #fff;
+	overflow: hidden;
+
+	&:hover {
+		& .project-card__content {
+			transform: translate(0, -66px);
+			transition: transform 0.3s;
+		}
+	}
+
+	&__content {
+		position: relative;
+		height: 163px;
+		background-color: #fff;
+		padding: 16px 0 24px;
+	}
+
+	&__title {
+		margin-bottom: 4px;
+	}
+
+	&__desc {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 150%;
+		color: $gray-700;
+		margin-bottom: 24px;
+	}
+}
