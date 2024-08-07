@@ -1,0 +1,20 @@
+.partners {
+	background-color: $gray-200;
+	padding-top: 80px;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		column-gap: 4vw;
+		row-gap: 40px;
+		width: 100%;
+		margin-top: 60px;
+	}
+}
+
+@media (width < 576px) {
+	.partners__list {
+		justify-content: space-around;
+	}
+}

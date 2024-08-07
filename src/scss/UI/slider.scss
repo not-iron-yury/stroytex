@@ -9,9 +9,11 @@
 	}
 
 	&__body {
-		margin-right: -25px;
-		padding-right: 25px;
-		margin-bottom: -80px;
-		padding-bottom: 80px;
+		margin: -5px -25px -80px -15px;
+		padding: 5px 25px 80px 15px;
+	}
+
+	&__item {
+		cursor: pointer;
 	}
 }
