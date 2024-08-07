@@ -15,7 +15,8 @@
 	border: 1px solid $primary;
 	background: $primary;
 
-	&:hover {
+	&:hover,
+	&:active {
 		color: $primary;
 		background: transparent;
 		transition: all 0.3s;
@@ -27,7 +28,8 @@
 	border: 1px solid $primary;
 	background: $white;
 
-	&:hover {
+	&:hover,
+	&:active {
 		color: $white;
 		background: $primary;
 		transition: all 0.3s;
@@ -38,7 +40,8 @@
 	border: 1px solid $white;
 	background: transparent;
 
-	&:hover {
+	&:hover,
+	&:active {
 		color: $primary;
 		border: 1px solid $primary;
 		transition: all 0.3s;
@@ -69,4 +72,22 @@
 	font-size: 12px;
 	line-height: 300%;
 	padding: 0px 24px;
+}
+
+/*================ slider ================*/
+.btn--slider {
+	width: 48px;
+	height: 48px;
+	border-radius: 100%;
+	transition: all 0.3s ease-in-out;
+	& svg {
+		fill: $gray-900;
+	}
+
+	&:hover {
+		background-color: $primary;
+		& svg {
+			fill: $white;
+		}
+	}
 }

@@ -1,0 +1,17 @@
+.slider {
+	position: relative;
+	padding-top: 60px;
+
+	&__nav {
+		position: absolute;
+		top: -35px;
+		right: -12px;
+	}
+
+	&__body {
+		margin-right: -25px;
+		padding-right: 25px;
+		margin-bottom: -80px;
+		padding-bottom: 80px;
+	}
+}

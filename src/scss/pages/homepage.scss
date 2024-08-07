@@ -4,6 +4,7 @@
 		text-align: center;
 	}
 }
+/*========================================*/
 .core-values {
 	text-align: center;
 	&__list {
@@ -14,7 +15,7 @@
 		top: 91px;
 	}
 }
-
+/*========================================*/
 .services-section {
 	text-align: center;
 	padding-top: 212px;
@@ -100,6 +101,13 @@
 	& svg {
 		margin-bottom: 24px;
 	}
-	&__subtitle {
+}
+/*========================================*/
+.homepage-projects {
+	padding: 120px 0px;
+
+	&__title {
+		max-width: 700px;
+		margin: 0;
 	}
 }
