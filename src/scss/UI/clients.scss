@@ -1,0 +1,55 @@
+.clients {
+	background-color: $gray-200;
+
+	&--homepage {
+		padding-top: 170px;
+		padding-bottom: 120px;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__content {
+		max-width: 600px;
+	}
+	&__picture {
+		position: relative;
+	}
+	&__slider {
+		position: relative;
+	}
+	&__photo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 72px;
+		height: 72px;
+		border-radius: 100%;
+		margin-bottom: 24px;
+	}
+	&__comment {
+		text-align: left;
+		color: $gray-800;
+		margin-bottom: 24px;
+	}
+
+	&__name {
+		max-width: 480px;
+		text-align: left;
+		font-weight: 700;
+		color: $gray-900;
+		margin-bottom: 4px;
+	}
+	&__position {
+		max-width: 480px;
+	}
+}
+
+.clients-slider__nav {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+}

@@ -8425,3 +8425,13 @@ const swiperHomePageProjects = new Swiper("#slider-1", {
 		prevEl: "#slider-1--prev",
 	},
 });
+
+
+const clientsSlider= new Swiper("#clients-slider", {
+	slidesPerView: 1,
+	loop: true,
+	navigation: {
+		nextEl: "#clients-slider--next",
+		prevEl: "#clients-slider--prev",
+	},
+});
