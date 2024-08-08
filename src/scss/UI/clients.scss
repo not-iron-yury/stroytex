@@ -1,21 +1,22 @@
 .clients {
 	background-color: $gray-200;
+	margin-bottom: -30px;
 
 	&--homepage {
-		padding-top: 170px;
-		padding-bottom: 120px;
+		padding-top: 140px;
 	}
 
 	&__container {
 		display: flex;
 		justify-content: space-between;
+		position: relative;
+		top: 30px;
 	}
 
 	&__content {
 		max-width: 600px;
 	}
 	&__picture {
-		position: relative;
 	}
 	&__slider {
 		position: relative;
