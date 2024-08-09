@@ -1,0 +1,13 @@
+.discuss {
+	background-image: url("../img/discuss-bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	padding: 80px 0;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+	}
+}

@@ -1,0 +1,55 @@
+<form class="form discuss-form white-block">
+	<h3 class="form__title discuss-form__title">
+		Быстрый способ обсудить детали
+	</h3>
+	<div class="form__body discuss-form__body">
+		<label class="form__field discuss-form__field">
+			<p class="form__lable">Имя<span>*</span></p>
+			<input
+				type="text"
+				class="form__input discuss-form__input"
+				placeholder="Ваше имя"
+				required
+			/>
+		</label>
+		<label class="form__field discuss-form__field">
+			<p class="form__lable">Телефон<span>*</span></p>
+			<input
+				type="tel"
+				class="form__input discuss-form__input"
+				placeholder="Ваш телефон"
+				required
+			/>
+		</label>
+		<label class="form__field discuss-form__field">
+			<p class="form__lable">Email</p>
+			<input
+				type="email"
+				class="form__input discuss-form__input"
+				placeholder="Ваша рабочая почта"
+				required
+			/>
+		</label>
+		<label class="form__field discuss-form__field">
+			<p class="form__lable">Сообщение<span>*</span></p>
+			<textarea
+				type="text"
+				class="form__input discuss-form__textarea"
+				placeholder="Ваше сообщение"
+				autocomplete="off"
+				required
+			></textarea>
+		</label>
+		<label
+			class="form__field discuss-form__field discuss-form__field--checkbox"
+		>
+			<input type="checkbox" checked />
+			<p class="discuss-form__checkbox-text descr-14"></p>
+				Я согласен получать сообщения от конструкторского бюро Стройтех.
+			</p>
+		</label>
+		<button class="btn btn--primary btn--reg" type="submit">
+			Отправить
+		</button>
+	</div>
+</form>
