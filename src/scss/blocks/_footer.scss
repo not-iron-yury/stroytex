@@ -1,0 +1,83 @@
+.footer {
+	background-color: $gray-900;
+	padding: 80px 0;
+
+	&__container {
+		//display: grid;
+	}
+
+	&__description {
+		max-width: 480px;
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		max-width: 386px;
+		margin-bottom: 24px;
+	}
+	&__logo {
+		color: $white;
+		margin-right: 20px;
+	}
+
+	&__social {
+		display: flex;
+		justify-content: space-between;
+		max-width: 184px;
+		width: 100%;
+		height: 24px;
+	}
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+	svg:hover {
+		opacity: 1;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	&__text {
+		max-width: 460px;
+		color: $white;
+		opacity: 0.6;
+	}
+
+	.footer-subscribe {
+		max-width: 495px;
+		width: 100%;
+		color: $white;
+
+		&__title {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 150%;
+			margin-bottom: 24px;
+		}
+		&__wrapper {
+			display: flex;
+			margin-bottom: 16px;
+		}
+		&__input {
+			width: 100%;
+			background: rgba(255, 255, 255, 0.12);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			border-radius: 4px;
+			padding: 0 16px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 150%;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		&__btn {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+		&__desc {
+			font-size: 12px;
+			line-height: 150%;
+			opacity: 0.6;
+		}
+	}
+}

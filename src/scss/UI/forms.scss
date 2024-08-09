@@ -85,15 +85,15 @@
 		&--checkbox {
 			flex-direction: row;
 			align-items: flex-start;
-			accent-color: $primary;
 			margin-bottom: 25px;
+
+			accent-color: $primary;
 
 			& input {
 				position: relative;
 				top: 5px;
 			}
 		}
-
 		& span {
 			color: $primary;
 		}
