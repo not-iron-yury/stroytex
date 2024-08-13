@@ -1,10 +1,12 @@
 <footer class="footer">
 	<div class="container footer__container">
-		<div class="footer__description">
-			<div class="footer__wrapper">
-				<a href="/" class="logo footer__logo">СТРОЙТЕ<span>Х</span></a>
-				<ul class="footer__social">
-					<li class="footer__social-item">
+		<div class="footer-description footer__description">
+			<div class="footer-description__wrapper">
+				<a href="/" class="logo footer-description__logo"
+					>СТРОЙТЕ<span>Х</span></a
+				>
+				<ul class="footer-description__social">
+					<li class="footer-description__social-item">
 						<a href="#" class="social-link">
 							<svg
 								fill="white"
@@ -17,7 +19,7 @@
 							</svg>
 						</a>
 					</li>
-					<li class="footer__social-item">
+					<li class="footer-description__social-item">
 						<a href="#" class="social-link"
 							><svg
 								fill="white"
@@ -30,7 +32,7 @@
 							</svg>
 						</a>
 					</li>
-					<li class="footer__social-item">
+					<li class="footer-description__social-item">
 						<a href="#" class="social-link">
 							<svg
 								fill="white"
@@ -43,7 +45,7 @@
 							</svg>
 						</a>
 					</li>
-					<li class="footer__social-item">
+					<li class="footer-description__social-item">
 						<a href="#" class="social-link">
 							<svg
 								fill="white"
@@ -56,7 +58,7 @@
 							</svg>
 						</a>
 					</li>
-					<li class="footer__social-item">
+					<li class="footer-description__social-item">
 						<a href="#" class="social-link">
 							<svg
 								fill="white"
@@ -88,7 +90,10 @@
 					type="text"
 					placeholder="Ваш email"
 				/>
-				<button class="btn btn--primary btn--reg footer-subscribe__btn">
+				<button
+					class="btn btn--primary btn--reg footer-subscribe__btn"
+					id="btn-subscribe"
+				>
 					Подписаться
 				</button>
 			</div>
@@ -97,6 +102,42 @@
 				сообщения и последние обновления от конструкторского бюро
 				Стройтех.
 			</p>
+		</div>
+
+		<ul class="footer-list footer__list footer__contacts">
+			<li class="footer-list__title">Главный офис</li>
+			<li class="footer-list__item">
+				<span>Адресс: </span> Москва, ул.Моховая 10, стр. 8
+			</li>
+			<li class="footer-list__item">
+				<span>Телефон: </span>
+				<a href="tel:00000000">+7 (495) 676-78-41</a>
+			</li>
+			<li class="footer-list__item">
+				<span>Email: </span>
+				<a href="mail:hello@stroytex.ru">hello@stroytex.ru</a>
+			</li>
+		</ul>
+
+		<ul class="footer-list footer__list footer__about">
+			<li class="footer-list__title">Кто мы</li>
+			<li class="footer-list__item"><a href="#">О нас</a></li>
+			<li class="footer-list__item"><a href="#">Вакансии</a></li>
+			<li class="footer-list__item"><a href="#">Контакты</a></li>
+		</ul>
+
+		<ul class="footer-list footer__list footer__experience">
+			<li class="footer-list__title">Наш опыт</li>
+			<li class="footer-list__item"><a href="#">Услуги</a></li>
+			<li class="footer-list__item"><a href="#">Работы</a></li>
+			<li class="footer-list__item"><a href="#">Новости</a></li>
+		</ul>
+		<div class="copyright footer__copyright">
+			<p class="copyright__item">© Все права защищены.</p>
+		</div>
+		<div class="gotop footer__gotop">
+			<span class="gotop__text">на верх</span
+			><button class="gotop-btn" id="gotop-btn"></button>
 		</div>
 	</div>
 </footer>

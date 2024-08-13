@@ -34,3 +34,36 @@ video.addEventListener("click", (e) => {
 	video.appendChild(iframe);
 	video.querySelector("button").remove();
 });
+/*---------------------/video----------------------*/
+
+/*--------------------subscribe--------------------*/
+const buttonSubscribe = document.getElementById('btn-subscribe');
+
+switchButtonSubscribe();
+window.addEventListener("resize", switchButtonSubscribe);
+
+function switchButtonSubscribe() {
+	if(window.innerWidth < 1365 && buttonSubscribe.textContent === 'Подписаться') {
+	buttonSubscribe.textContent = 'Go';
+	buttonSubscribe.classList.add('footer-subscribe__btn--small');
+	}
+	if (window.innerWidth > 1364 && buttonSubscribe.textContent !== 'Подписаться') {
+	buttonSubscribe.textContent = 'Подписаться'
+	buttonSubscribe.classList.remove('footer-subscribe__btn--small');
+	}
+
+}
+
+/*-------------------/subscribe--------------------*/
+
+
+/*----------------------goTop----------------------*/
+const gotopBtn = document.getElementById("gotop-btn");
+
+gotopBtn.addEventListener("click", () => {
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth",
+	});
+});
+/*---------------------/goTop----------------------*/
