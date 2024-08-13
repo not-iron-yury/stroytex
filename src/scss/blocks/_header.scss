@@ -12,10 +12,16 @@
 
 /*-------------------------------*/
 
-.header {
-	&--white {
-		background-color: #fff;
-	}
+.body--homepage .header {
+	background-color: #fff;
+}
+
+.body--secondpage .header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: transparent;
 }
 
 .header__container {
