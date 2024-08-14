@@ -23,7 +23,7 @@
 	}
 }
 
-.btn--white {
+.btn--transparent {
 	color: $primary;
 	border: 1px solid $primary;
 	background: $white;
@@ -35,7 +35,7 @@
 		transition: all 0.3s;
 	}
 }
-.btn--transparent {
+.btn--white {
 	color: $white;
 	border: 1px solid $white;
 	background: transparent;
