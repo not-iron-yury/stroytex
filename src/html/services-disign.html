@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>СТРОЙТЕХ Конструкции</title>
+		<meta name="description" content="Описание страницы" />
+
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body class="body body--secondpage">
+		@@include('blocks/header.html')
+		<main>
+			<section class="hero-second hero-second--design">
+				<div class="container">
+					<div class="hero-second__content">
+						<ul
+							class="breadcrumbs descr-14 hero-second__breadcrumbs"
+						>
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link"
+									>Главная</a
+								>
+							</li>
+							<li class="breadcrumbs__item">
+								<a
+									href="/services.html"
+									class="breadcrumbs__link"
+									>Услуги</a
+								>
+							</li>
+							<li class="breadcrumbs__item">
+								<a class="breadcrumbs__link"
+									>Дизайн интерьеров</a
+								>
+							</li>
+						</ul>
+						<h1 class="title-h1 hero-second__title">
+							Дизайн интерьеров
+						</h1>
+						<p class="descr-20 hero-second__descr">
+							Если вы ищете строительную компанию с полным
+							спектром услуг, обратите внимание на строительное
+							бюро Стройтех.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="offer">
+				<div class="container offer__container">
+					<img
+						class="offer__img"
+						src="./img/services/offer-design.jpg"
+						alt="дизайн помещений"
+					/>
+					<div class="offer__body">
+						<h2 class="title-h2 offer__title">Мы предлагаем</h2>
+						<ul class="offer__list">
+							<li class="offer__item open">
+								<details open>
+									<summary class="descr-28 offer__subtitle">
+										Дизайн интерьера аппартаментов
+									</summary>
+									<p class="offer__descr">
+										Далеко-далеко за словесными горами в
+										стране гласных и согласных живут рыбные
+										тексты. По всей маленькая рыбного дал?
+										Родного повстречался осталось заглавных
+										речью одна?
+									</p>
+								</details>
+							</li>
+							<li class="offer__item">
+								<details>
+									<summary class="descr-28 offer__subtitle">
+										Дизайн интерьера частного дома
+									</summary>
+									<p class="offer__descr">
+										Далеко-далеко за словесными горами в
+										стране гласных и согласных живут рыбные
+										тексты.
+									</p>
+								</details>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			@@include('blocks/discuss.html')
+		</main>
+		@@include('blocks/footer.html')
+		<script src="./js/index.js"></script>
+	</body>
+</html>

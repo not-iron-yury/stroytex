@@ -1,0 +1,41 @@
+.offer {
+	padding: 120px 0 180px;
+
+	&__container {
+		display: grid;
+		grid-template-columns: 705px 420px;
+		justify-content: space-between;
+	}
+	&__img {
+	}
+	&__body {
+	}
+	&__title {
+		font-weight: 900;
+		margin-bottom: 60px;
+	}
+	&__list {
+	}
+	&__item {
+		background-image: url("../img/svg/Plus.svg");
+		background-repeat: no-repeat;
+		background-position: 0 10px;
+		padding-left: 44px;
+		margin-bottom: 24px;
+		cursor: pointer;
+		transition: all 0.15s ease-in-out;
+
+		&.open {
+			background-image: url("../img/svg/Minus.svg");
+		}
+	}
+	&__subtitle {
+		font-size: 28px;
+		list-style: none;
+
+		margin-bottom: 12px;
+	}
+	&__descr {
+		cursor: auto;
+	}
+}

@@ -1,39 +1,42 @@
 /*----------------------video----------------------*/
 const video = document.querySelector(".video");
 
-// generate video url
-let generateUrl = function (id) {
-	let query = "?rel=0&showinfo=0&autoplay=1";
-	return "https://www.youtube.com/embed/" + id + query;
-};
+if (video) {
+	// generate video url
+	let generateUrl = function (id) {
+		let query = "?rel=0&showinfo=0&autoplay=1";
+		return "https://www.youtube.com/embed/" + id + query;
+	};
 
-// creating iframe
-let createIframe = function (id) {
-	let iframe = document.createElement("iframe");
+	// creating iframe
+	let createIframe = function (id) {
+		let iframe = document.createElement("iframe");
 
-	iframe.setAttribute("allowfullscreen", "");
-	iframe.setAttribute("allow", "autoplay; encrypted-media");
-	iframe.setAttribute("src", generateUrl(id));
+		iframe.setAttribute("allowfullscreen", "");
+		iframe.setAttribute("allow", "autoplay; encrypted-media");
+		iframe.setAttribute("src", generateUrl(id));
 
-	return iframe;
-};
+		return iframe;
+	};
 
-// main code
-let videoId = video.getAttribute("data-video");
-// let youtubeImgSrc = "https://i.ytimg.com/vi/" + videoId + "/sddefault.jpg";
-let youtubeImgSrc =
-	"https://kartinkof.club/uploads/posts/2022-09/1662550944_36-kartinkof-club-p-novie-i-krasivie-kartinki-stroika-39.jpg";
+	// main code
+	let videoId = video.getAttribute("data-video");
+	// let youtubeImgSrc = "https://i.ytimg.com/vi/" + videoId + "/sddefault.jpg";
+	let youtubeImgSrc =
+		"https://kartinkof.club/uploads/posts/2022-09/1662550944_36-kartinkof-club-p-novie-i-krasivie-kartinki-stroika-39.jpg";
 
-let img = video.querySelector("img");
-img.setAttribute("src", youtubeImgSrc);
+	let img = video.querySelector("img");
+	img.setAttribute("src", youtubeImgSrc);
 
-video.addEventListener("click", (e) => {
-	e.preventDefault();
-	let iframe = createIframe(videoId);
-	video.querySelector("img").remove();
-	video.appendChild(iframe);
-	video.querySelector("button").remove();
-});
+	video.addEventListener("click", (e) => {
+		e.preventDefault();
+		let iframe = createIframe(videoId);
+		video.querySelector("img").remove();
+		video.appendChild(iframe);
+		video.querySelector("button").remove();
+	});
+}
+
 /*---------------------/video----------------------*/
 
 /*--------------------subscribe--------------------*/
@@ -67,3 +70,29 @@ gotopBtn.addEventListener("click", () => {
 	});
 });
 /*---------------------/goTop----------------------*/
+
+/*-------------------offer-details-----------------*/
+const offerItems = document.querySelectorAll('.offer__item');
+
+offerItems.forEach(el => {
+	console.log(el)
+	el.addEventListener('click', toggleDetails);
+})
+
+function toggleDetails(e) {
+	const elem = e.target;
+	if(elem.nodeName === 'LI') {
+		elem.classList.toggle('open');
+		const details = elem.firstElementChild;
+		if(details.hasAttribute('open')) {
+			details.removeAttribute('open')
+		}else {
+			details.setAttribute('open', '');
+		}
+	
+	} else {
+		elem.parentElement.parentElement.classList.toggle('open');
+	}
+
+}
+/*------------------/offer-details-----------------*/
