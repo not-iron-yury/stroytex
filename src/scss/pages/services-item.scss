@@ -17,13 +17,8 @@
 	&__list {
 	}
 	&__item {
-		// background-image: url("../img/svg/Plus.svg");
-		// background-repeat: no-repeat;
-		// background-position: 0 10px;
-		// padding-left: 44px;
 		margin-bottom: 24px;
 		cursor: pointer;
-		transition: all 0.15s ease-in-out;
 	}
 	&__details {
 		background-image: url("../img/svg/Plus.svg");
@@ -31,7 +26,7 @@
 		background-position: 0 10px;
 		padding-left: 44px;
 
-		&.open {
+		&[open] {
 			background-image: url("../img/svg/Minus.svg");
 		}
 	}

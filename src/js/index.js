@@ -82,14 +82,11 @@ if(offerDetails) {
 	function toggleDetails(e) {
 		const elem = e.target;
 		if(elem.nodeName === 'DETAILS') {		// клик по маркеру (тега datails)
-			elem.classList.toggle('open');		
 			if(elem.hasAttribute('open')) {
 				elem.removeAttribute('open')
 				}else {
 					elem.setAttribute('open', '');
 				}
-		} else {	// клик по тегу summary (children тега datails)	
-			elem.parentElement.classList.toggle('open');
 		}
 	}
 }
