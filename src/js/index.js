@@ -72,27 +72,25 @@ gotopBtn.addEventListener("click", () => {
 /*---------------------/goTop----------------------*/
 
 /*-------------------offer-details-----------------*/
-const offerItems = document.querySelectorAll('.offer__item');
+const offerDetails = document.querySelectorAll('.offer__details');
 
-offerItems.forEach(el => {
-	console.log(el)
-	el.addEventListener('click', toggleDetails);
-})
-
-function toggleDetails(e) {
-	const elem = e.target;
-	if(elem.nodeName === 'LI') {
-		elem.classList.toggle('open');
-		const details = elem.firstElementChild;
-		if(details.hasAttribute('open')) {
-			details.removeAttribute('open')
-		}else {
-			details.setAttribute('open', '');
-		}
+if(offerDetails) {
+	offerDetails.forEach(el => {
+		el.addEventListener('click', toggleDetails);
+	})
 	
-	} else {
-		elem.parentElement.parentElement.classList.toggle('open');
+	function toggleDetails(e) {
+		const elem = e.target;
+		if(elem.nodeName === 'DETAILS') {		// клик по маркеру (тега datails)
+			elem.classList.toggle('open');		
+			if(elem.hasAttribute('open')) {
+				elem.removeAttribute('open')
+				}else {
+					elem.setAttribute('open', '');
+				}
+		} else {	// клик по тегу summary (children тега datails)	
+			elem.parentElement.classList.toggle('open');
+		}
 	}
-
 }
 /*------------------/offer-details-----------------*/
