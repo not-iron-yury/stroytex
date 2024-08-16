@@ -85,8 +85,8 @@
 			height: 116px;
 		}
 		&:hover:after {
-			background: #fff;
-			background-image: url("../img/svg/circle.svg");
+			border-radius: 100%;
+			background: #fff5f3;
 		}
 
 		&::before {
