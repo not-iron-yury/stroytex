@@ -58,11 +58,13 @@
 }
 
 .wedoit {
+	padding-bottom: 120px;
 	&__list {
 		display: grid;
 		justify-content: space-between;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 30px;
+
 		counter-reset: item;
 	}
 	&__item {
@@ -83,13 +85,17 @@
 			display: block;
 			width: 116px;
 			height: 116px;
+			border-radius: 100%;
 		}
 		&:hover:after {
-			border-radius: 100%;
+			transition: all 0.3s ease-in-out;
 			background: #fff5f3;
 		}
 
 		&::before {
+			counter-increment: item;
+			content: "0" counter(item);
+
 			position: absolute;
 			top: 0;
 			left: -26px;
@@ -97,8 +103,6 @@
 			display: block;
 			width: 84px;
 			height: 84px;
-			counter-increment: item;
-			content: "0" counter(item);
 			font-weight: 700;
 			font-size: 46px;
 			line-height: 170%;
@@ -109,12 +113,24 @@
 		}
 		&:hover::before {
 			color: $primary;
-
 			background-color: #ffe2db;
-			z-index: 5;
+			z-index: 2;
+			transition: all 0.3s ease-in-out;
 		}
 	}
 	&__subtitle {
 		margin-bottom: 8px;
+	}
+}
+
+.our-benefits {
+	background-color: $gray-900;
+	padding: 80px 0 74px;
+
+	&__title {
+		color: $white;
+	}
+	&__descr {
+		color: #9e9fa4;
 	}
 }

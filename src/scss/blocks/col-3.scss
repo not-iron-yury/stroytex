@@ -17,6 +17,17 @@
 		&--comfort {
 			background-image: url("./../../img/svg/icon-box/comfort.svg");
 		}
+
+		&--cost {
+			background-image: url("./../../img/svg/icon-box/cost.svg");
+		}
+		&--workers {
+			background-image: url("./../../img/svg/icon-box/workers.svg");
+		}
+		&--control {
+			background-image: url("./../../img/svg/icon-box/control.svg");
+		}
+
 		&--center {
 			border-right: 1px solid;
 			border-left: 1px solid;
@@ -34,9 +45,18 @@
 		margin: 0 auto;
 	}
 	&__title {
+		text-align: center;
 		margin-bottom: 8px;
+
+		&--light {
+			color: white;
+			text-align: center;
+		}
 	}
 
-	&__descr {
+	&__desc {
+		&--light {
+			color: #9e9fa4;
+		}
 	}
 }
