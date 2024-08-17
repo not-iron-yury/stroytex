@@ -6,20 +6,20 @@
 @import "./UI/forms";
 @import "./UI/white-block";
 @import "./UI/view-more";
-@import "./UI/projects";
-@import "./UI/partners";
-@import "./UI/clients";
-@import "./UI/news-anons";
 
 /* Blocks */
 @import "./blocks/header";
 @import "./blocks/footer";
 @import "./blocks/hero";
 @import "./blocks/video";
-@import "./blocks/col-3";
+@import "./blocks/our-services";
+@import "./blocks/services";
+@import "./blocks/fackts";
+@import "./blocks/benefits";
+@import "./blocks/weoffer";
+@import "./blocks/wedoit";
 @import "./blocks/discuss";
-
-/* Pages */
-@import "./pages/homepage";
-@import "./pages/services";
-@import "./pages/services-item";
+@import "./blocks/projects";
+@import "./blocks/partners";
+@import "./blocks/clients";
+@import "./blocks/news";

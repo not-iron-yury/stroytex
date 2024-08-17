@@ -1,3 +1,27 @@
+.recent-news {
+	padding: 100px 0;
+	color: $gray-800;
+
+	&__list {
+		display: grid;
+		grid-template-columns: 705px 495px; //48.79vw 34.26vw;
+		grid-template-rows: 255px; //27.13vh;
+		grid-template-areas: "a b" "a c";
+		gap: 30px;
+	}
+	&__item {
+		&:nth-child(1) {
+			grid-area: a;
+		}
+		&:nth-child(2) {
+			grid-area: b;
+		}
+		&:nth-child(3) {
+			grid-area: c;
+		}
+	}
+}
+
 .news-anons {
 	cursor: pointer;
 

@@ -1,0 +1,58 @@
+.weoffer {
+	margin-bottom: 180px;
+
+	&__container {
+		display: grid;
+		grid-template-columns: 705px 420px;
+		justify-content: space-between;
+	}
+	&__img {
+	}
+	&__body {
+	}
+	&__title {
+		font-weight: 900;
+		margin-bottom: 60px;
+	}
+	&__list {
+	}
+	&__item {
+		margin-bottom: 24px;
+		cursor: pointer;
+	}
+	&__details {
+		background-image: url("../img/svg/Plus.svg");
+		background-repeat: no-repeat;
+		background-position: 0 10px;
+		padding-left: 44px;
+
+		&[open] {
+			background-image: url("../img/svg/Minus.svg");
+		}
+	}
+	&__subtitle {
+		font-size: 28px;
+		list-style: none;
+
+		margin-bottom: 12px;
+	}
+	&__descr {
+		cursor: auto;
+	}
+
+	.details-animated[open] {
+		& .weoffer__descr {
+			animation-name: fadeInDown;
+			animation-duration: 0.5s;
+		}
+	}
+
+	@keyframes fadeInDown {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+}

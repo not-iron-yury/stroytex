@@ -1,6 +1,7 @@
 .hero {
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin-bottom: 120px;
 
 	&--main {
 		background-image: url("../../img/bg-image.jpg");
@@ -33,6 +34,7 @@
 	background-position: center right;
 	background-repeat: no-repeat;
 	padding-top: 152px;
+	margin-bottom: 120px;
 
 	&--services {
 		background-image: url("../img/bg-services.jpg");
