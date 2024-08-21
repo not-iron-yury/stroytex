@@ -1,6 +1,14 @@
 .partners {
-	background-color: $gray-200;
-	padding-top: 80px;
+	&--homepage {
+		padding-top: 80px;
+	}
+	&--services-item {
+		padding-bottom: 110px;
+	}
+
+	&--grey {
+		background-color: $gray-200;
+	}
 
 	&__list {
 		display: flex;
