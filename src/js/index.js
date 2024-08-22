@@ -91,3 +91,59 @@ if(offerDetails) {
 	}
 }
 /*------------------/offer-details-----------------*/
+
+/*------------------progects-work------------------*/
+const tabsButtons = document.querySelectorAll('.project-tabs__btn');
+
+if (tabsButtons) {
+	
+	tabsButtons.forEach(btn =>
+		btn.addEventListener('click', projectFilter)
+	)
+
+	// обработчик события (меняет стили у табов и фильтрует карточки проектов)
+	function projectFilter(e) {
+		const btnTarget = e.target;
+		if(btnTarget.hasAttribute("data-work")) {
+			const filterValue = btnTarget.dataset.work;
+			switchingTabs(btnTarget);
+			projectsCardFilter(filterValue);
+		}
+	}
+
+	// стили для активного таба
+	function switchingTabs(btnTarget) {
+		tabsButtons.forEach(btn => {
+			btn.classList.remove("active");
+		}); 
+		btnTarget.classList.add("active");
+	}
+
+	// фильтр карточек проектов
+	function projectsCardFilter(filterValue) {
+		const projectsCardsAll = document.querySelectorAll(".project-grid__item");
+		
+		if (filterValue === "all") {
+			projectsCardsAll.forEach(card => card.classList.remove('hidde'));
+		}
+		else {
+			projectsCardsAll.forEach(card => {
+				if (card.dataset.work === filterValue) {
+					card.classList.remove('hidde');
+			} else (card.classList.add('hidde'))
+		});
+	}
+	}
+
+
+	// подгрузка карточек проектов
+	const moreButton = document.getElementById('project-grid__btn');
+	moreButton.addEventListener('click', loadMoreProject);
+
+	function loadMoreProject() {
+		moreButton.firstElementChild.classList.add('active');
+		setTimeout(()=> {moreButton.firstElementChild.classList.remove('active')}, 800)
+		
+	}
+}
+/*-----------------/progects-work------------------*/

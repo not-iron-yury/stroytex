@@ -43,6 +43,10 @@
 	&--design {
 		background-image: url("../img/bg/bg-services-item.jpg");
 	}
+	&--work {
+		background-image: url("../img/bg/bg-ourwork.png");
+		margin-bottom: 0;
+	}
 
 	&__content {
 		max-width: 600px;
