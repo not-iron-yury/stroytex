@@ -92,71 +92,100 @@ if(offerDetails) {
 }
 /*------------------/offer-details-----------------*/
 
-/*------------------progects-work------------------*/
+/*------------------projects-work------------------*/
 const tabsButtons = document.querySelectorAll('.project-tabs__btn');
-
-
+const projectCardsAll = document.querySelectorAll(".project-grid__item");
 if (tabsButtons) {
-	// колекция карточек проектов
-	const projectsCardsAll = document.querySelectorAll(".project-grid__item");
-	// кнопка подгрузки карточек прокектов
+	// кнопка подгрузки карточек проектов
 	const moreButton = document.getElementById('project-grid__more-btn');
+	
+	// стартовое значение видимых карточек
+	const prevCountCards = 3;
+	
+	// количество видимых карточек
+	const countCards = {
+		_count: prevCountCards,
+		set(value){
+			this._count = value;
+		},
+		increment(value) {
+			this._count += value;
+			filteredListProjects(filterType.get(), this._count); 
+		},
+		get() {
+			return this._count;
+		},
+	};
+	Object.preventExtensions(countCards);
+	
+	// тип фильтрации карточек
+	const filterType = {
+		_value: 'all',
+		set(value) {
+			this._value = value;
+			countCards.set(prevCountCards);
+			filteredListProjects(this._value, countCards.get());
+		},
+		get() {
+			return this._value;
+		},
+	};
+	Object.preventExtensions(filterType);
 
-	// слушатели на табы
+
+	// отображение списка проектов при первой загрузке страницы
+	filteredListProjects('all', 3);
+
+	//-------------------------------------------------------//
+	// активный таб (active class и изменение filterType)
 	tabsButtons.forEach(btn =>
-		btn.addEventListener('click', projectFilter)
+		btn.addEventListener('click', switchingTabs)
 	)
 
-	// видимость кнопки moreButton
-	function visibilityMoreButton(countCard){
-		if (countCard > 8) {
-			moreButton.classList.remove('hidden')
-		} else {
-			moreButton.classList.add('hidden');
-		}
+	function switchingTabs(e) {
+		tabsButtons.forEach(btn => btn.classList.remove("active")); 	// отключение active class для всех
+		e.target.classList.add("active");															// active class для активного таба
+		filterType.set(e.target.dataset.filter);											// новое значение фильтра карточек
 	}
 
-	// обработчик события (меняет стили у табов и фильтрует карточки проектов)
-	function projectFilter(e) {
-		const btnTarget = e.target;
-		if(btnTarget.hasAttribute("data-filter")) {
-			const filterValue = btnTarget.dataset.filter;
-			switchingTabs(btnTarget);
-			projectsCardFilter(filterValue);
-		}
-	}
-
-	// стили для активного таба
-	function switchingTabs(btnTarget) {
-		tabsButtons.forEach(btn => btn.classList.remove("active")); 
-		btnTarget.classList.add("active");
-	}
-
-	// фильтр карточек проектов
-	function projectsCardFilter(filterValue) {
-		if (filterValue === "all") {
-			projectsCardsAll.forEach(card => card.classList.remove('hidde'));
-			visibilityMoreButton(projectsCardsAll.length);
-		}
-		else {
-			let countCard = 0;
-			projectsCardsAll.forEach(card => {
-				if (card.dataset.filter === filterValue) {
-					card.classList.remove('hidde');
-				}else {
-					card.classList.add('hidde');
-					countCard ++;
-				}
-			});
-			visibilityMoreButton(projectsCardsAll.length - countCard);
-		}
-	}
-
-	// анимация кнопки moreButton
+	//-------------------------------------------------------//
+	// кнопка moreButton (анимация и изменение countCrads)
 	moreButton.addEventListener('click', loadMoreProject);
 	function loadMoreProject() {
-		moreButton.firstElementChild.classList.add('active');
-		setTimeout(()=> {moreButton.firstElementChild.classList.remove('active')}, 1000);
+		moreButton.firstElementChild.classList.add('active');					// включение анимации
+		countCards.increment(3);																			// увеличение countCrads
+		setTimeout(()=> {
+			moreButton.firstElementChild.classList.remove('active')
+		}, 1000);																											// удаление класса запускающего анимацию
+	}
+
+	//-------------------------------------------------------//
+	// фильтр списка проектов
+	function filteredListProjects(type, count){
+		projectCardsAll.forEach(card => card.classList.add("hidden"));	
+
+		const projectList = (type === 'all') 
+			? projectCardsAll 
+			: document.querySelectorAll(`.project-grid__item[data-filter="${type}"]`);
+		
+		for (const card of projectList) {
+			if (count !== 0) {
+				card.classList.remove("hidden");
+				count--;
+			} else break;
+		}
+
+		visibilityMoreButton(projectList.length);
+	}
+
+	//-------------------------------------------------------//
+	// скрытие/отображение кнопки "Показать ещё"
+	function visibilityMoreButton(listLength) {
+		if (countCards.get() >= listLength) {
+			moreButton.classList.add('hidden');
+		} else {
+			moreButton.classList.remove('hidden');
+		}	
 	}
 }
-/*-----------------/progects-work------------------*/
+/*-----------------/projects-work------------------*/
