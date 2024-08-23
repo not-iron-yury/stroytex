@@ -94,8 +94,11 @@ if(offerDetails) {
 
 /*------------------projects-work------------------*/
 const tabsButtons = document.querySelectorAll('.project-tabs__btn');
-const projectCardsAll = document.querySelectorAll(".project-grid__item");
+
 if (tabsButtons) {
+	// все карточки проектов
+	const projectCardsAll = document.querySelectorAll(".project-grid__item");
+	
 	// кнопка подгрузки карточек проектов
 	const moreButton = document.getElementById('project-grid__more-btn');
 	
