@@ -124,11 +124,12 @@
 .project-grid {
 	text-align: center;
 	margin-bottom: 100px;
+
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 30px;
-		margin-bottom: 60px;
+		padding-bottom: 60px;
 	}
 	&__item {
 		&.hidde {
@@ -136,9 +137,13 @@
 		}
 	}
 
-	&__btn {
+	&__more-btn {
 		font-weight: 700;
 		color: $gray-600;
+
+		&.hidden {
+			display: none;
+		}
 
 		&:hover {
 			color: $gray-800;

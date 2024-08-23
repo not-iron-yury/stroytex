@@ -95,17 +95,32 @@ if(offerDetails) {
 /*------------------progects-work------------------*/
 const tabsButtons = document.querySelectorAll('.project-tabs__btn');
 
+
 if (tabsButtons) {
-	
+	// колекция карточек проектов
+	const projectsCardsAll = document.querySelectorAll(".project-grid__item");
+	// кнопка подгрузки карточек прокектов
+	const moreButton = document.getElementById('project-grid__more-btn');
+
+	// слушатели на табы
 	tabsButtons.forEach(btn =>
 		btn.addEventListener('click', projectFilter)
 	)
 
+	// видимость кнопки moreButton
+	function visibilityMoreButton(countCard){
+		if (countCard > 8) {
+			moreButton.classList.remove('hidden')
+		} else {
+			moreButton.classList.add('hidden');
+		}
+	}
+
 	// обработчик события (меняет стили у табов и фильтрует карточки проектов)
 	function projectFilter(e) {
 		const btnTarget = e.target;
-		if(btnTarget.hasAttribute("data-work")) {
-			const filterValue = btnTarget.dataset.work;
+		if(btnTarget.hasAttribute("data-filter")) {
+			const filterValue = btnTarget.dataset.filter;
 			switchingTabs(btnTarget);
 			projectsCardFilter(filterValue);
 		}
@@ -113,37 +128,35 @@ if (tabsButtons) {
 
 	// стили для активного таба
 	function switchingTabs(btnTarget) {
-		tabsButtons.forEach(btn => {
-			btn.classList.remove("active");
-		}); 
+		tabsButtons.forEach(btn => btn.classList.remove("active")); 
 		btnTarget.classList.add("active");
 	}
 
 	// фильтр карточек проектов
 	function projectsCardFilter(filterValue) {
-		const projectsCardsAll = document.querySelectorAll(".project-grid__item");
-		
 		if (filterValue === "all") {
 			projectsCardsAll.forEach(card => card.classList.remove('hidde'));
+			visibilityMoreButton(projectsCardsAll.length);
 		}
 		else {
+			let countCard = 0;
 			projectsCardsAll.forEach(card => {
-				if (card.dataset.work === filterValue) {
+				if (card.dataset.filter === filterValue) {
 					card.classList.remove('hidde');
-			} else (card.classList.add('hidde'))
-		});
-	}
+				}else {
+					card.classList.add('hidde');
+					countCard ++;
+				}
+			});
+			visibilityMoreButton(projectsCardsAll.length - countCard);
+		}
 	}
 
-
-	// подгрузка карточек проектов
-	const moreButton = document.getElementById('project-grid__btn');
+	// анимация кнопки moreButton
 	moreButton.addEventListener('click', loadMoreProject);
-
 	function loadMoreProject() {
 		moreButton.firstElementChild.classList.add('active');
-		setTimeout(()=> {moreButton.firstElementChild.classList.remove('active')}, 800)
-		
+		setTimeout(()=> {moreButton.firstElementChild.classList.remove('active')}, 1000);
 	}
 }
 /*-----------------/progects-work------------------*/
