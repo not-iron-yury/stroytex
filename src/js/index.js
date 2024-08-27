@@ -95,15 +95,15 @@ if(offerDetails.length > 0) {
 /*------------------projects-work------------------*/
 
 // табы (фильтр карточек проектов)
-const tabsButtons = document.querySelectorAll('.project-tabs__btn');
+const tabsButtons = document.querySelectorAll('.projects-tabs__btn');
 
 if (tabsButtons.length > 0) {
 	
 	// все карточки проектов
-	const projectCardsAll = document.querySelectorAll(".project-grid__item");
+	const projectCardsAll = document.querySelectorAll(".projects-grid__item");
 	
 	// кнопка подгрузки карточек проектов
-	const moreButton = document.getElementById('project-grid__more-btn');
+	const moreButton = document.getElementById('projects-grid__more-btn');
 
 	
 	// стартовое значение видимых карточек
@@ -172,7 +172,7 @@ if (tabsButtons.length > 0) {
 
 		const projectList = (type === 'all') 
 			? projectCardsAll 
-			: document.querySelectorAll(`.project-grid__item[data-filter="${type}"]`);
+			: document.querySelectorAll(`.projects-grid__item[data-filter="${type}"]`);
 		
 		for (const card of projectList) {
 			if (count !== 0) {

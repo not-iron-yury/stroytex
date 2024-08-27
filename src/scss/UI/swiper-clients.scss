@@ -1,0 +1,14 @@
+.swpr-clients {
+	position: relative;
+
+	&__nav {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background-color: $gray-200;
+		z-index: 100;
+	}
+	&__slide {
+		cursor: pointer;
+	}
+}

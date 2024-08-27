@@ -1,0 +1,44 @@
+.swpr-work-item {
+	position: relative;
+
+	&__content {
+		margin-bottom: 20px;
+	}
+	&__slide {
+		cursor: pointer;
+	}
+
+	&__btn {
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+
+		&--prev {
+			left: 32px;
+		}
+		&--next {
+			right: 32px;
+		}
+	}
+}
+.swpr-work-nav {
+	position: relative;
+
+	&__content {
+		margin-bottom: 20px;
+	}
+	&__slide {
+		opacity: 0.5;
+		border-radius: 4px;
+		transition: opacity 0.25s ease-in-out;
+		cursor: pointer;
+
+		&:hover,
+		&:active {
+			opacity: 1;
+		}
+	}
+	.swiper-slide-thumb-active {
+		opacity: 1;
+	}
+}

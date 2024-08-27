@@ -6,8 +6,10 @@
 @import "./UI/forms";
 @import "./UI/white-block";
 @import "./UI/view-more";
-@import "./UI/sliders";
 @import "./UI/breadcrumbs";
+@import "./UI/swiper-hero";
+@import "./UI/swiper-projects";
+@import "./UI/swiper-clients";
 
 /* Blocks */
 @import "./blocks/header";
@@ -22,8 +24,8 @@
 @import "./blocks/wedoit";
 @import "./blocks/discuss";
 @import "./blocks/project-card";
-@import "./blocks/project-tabs";
-@import "./blocks/project-grid";
+@import "./blocks/projects-tabs";
+@import "./blocks/projects-grid";
 @import "./blocks/projects-section";
 @import "./blocks/partners";
 @import "./blocks/clients";

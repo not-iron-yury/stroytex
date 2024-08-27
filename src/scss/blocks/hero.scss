@@ -44,7 +44,6 @@
 		margin: 0;
 	}
 
-	//background-images
 	&--services {
 		background-image: url("../img/bg/bg-services.jpg");
 	}
@@ -59,5 +58,6 @@
 	&--work-item {
 		height: auto;
 		background-image: url("../img/bg/bg-work-item.png");
+		margin-bottom: 100px;
 	}
 }
