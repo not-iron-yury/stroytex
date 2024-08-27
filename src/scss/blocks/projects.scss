@@ -66,6 +66,15 @@
 	}
 }
 
+.work-slider {
+	position: relative;
+
+	&__nav {
+		position: absolute;
+		top: -35px;
+		right: -12px;
+	}
+}
 .projects-our-work {
 	margin-bottom: 100px;
 }

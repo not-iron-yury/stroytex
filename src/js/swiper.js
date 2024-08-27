@@ -8435,3 +8435,12 @@ const clientsSlider= new Swiper("#clients-slider", {
 		prevEl: "#clients-slider--prev",
 	},
 });
+
+const workItemSlider= new Swiper("#slider-work-item", {
+	slidesPerView: 1,
+	loop: true,
+	navigation: {
+		nextEl: "#work-item--next",
+		prevEl: "#work-item--prev",
+	},
+});

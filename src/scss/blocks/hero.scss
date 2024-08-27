@@ -47,6 +47,12 @@
 		background-image: url("../img/bg/bg-ourwork.png");
 		margin-bottom: 0;
 	}
+	&--work-item {
+		height: auto;
+		background-image: url("../img/bg/bg-work-item.png");
+		padding-top: 152px;
+		margin-bottom: 100px;
+	}
 
 	&__content {
 		max-width: 600px;

@@ -95,7 +95,8 @@ if(offerDetails) {
 /*------------------projects-work------------------*/
 const tabsButtons = document.querySelectorAll('.project-tabs__btn');
 
-if (tabsButtons) {
+if (tabsButtons > 0) {
+	
 	// все карточки проектов
 	const projectCardsAll = document.querySelectorAll(".project-grid__item");
 	
@@ -103,7 +104,7 @@ if (tabsButtons) {
 	const moreButton = document.getElementById('project-grid__more-btn');
 	
 	// стартовое значение видимых карточек
-	const prevCountCards = 6;
+	const prevCountCards = 3;
 	
 	// количество видимых карточек
 	const countCards = {
