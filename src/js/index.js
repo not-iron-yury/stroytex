@@ -103,7 +103,7 @@ if (tabsButtons) {
 	const moreButton = document.getElementById('project-grid__more-btn');
 	
 	// стартовое значение видимых карточек
-	const prevCountCards = 3;
+	const prevCountCards = 6;
 	
 	// количество видимых карточек
 	const countCards = {
@@ -137,7 +137,7 @@ if (tabsButtons) {
 
 
 	// отображение списка проектов при первой загрузке страницы
-	filteredListProjects('all', 3);
+	filteredListProjects('all', prevCountCards);
 
 	//-------------------------------------------------------//
 	// активный таб (active class и изменение filterType)
@@ -165,7 +165,7 @@ if (tabsButtons) {
 	//-------------------------------------------------------//
 	// фильтр списка проектов
 	function filteredListProjects(type, count){
-		projectCardsAll.forEach(card => card.classList.add("hidden"));	
+		projectCardsAll.forEach(card => card.classList.add("hidden"));
 
 		const projectList = (type === 'all') 
 			? projectCardsAll 
