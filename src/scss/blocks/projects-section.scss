@@ -1,0 +1,16 @@
+.projects-section {
+	&__title {
+		max-width: 700px;
+		margin: 0;
+	}
+	&--homepage {
+		padding: 120px 0;
+	}
+	&--services-item {
+		padding: 154px 0 100px;
+	}
+
+	&--our-work {
+		margin-bottom: 100px;
+	}
+}

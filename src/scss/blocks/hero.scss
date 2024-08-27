@@ -36,6 +36,15 @@
 	padding-top: 152px;
 	margin-bottom: 120px;
 
+	&__content {
+		max-width: 600px;
+		width: 100%;
+	}
+	&__descr {
+		margin: 0;
+	}
+
+	//background-images
 	&--services {
 		background-image: url("../img/bg/bg-services.jpg");
 	}
@@ -50,44 +59,5 @@
 	&--work-item {
 		height: auto;
 		background-image: url("../img/bg/bg-work-item.png");
-		padding-top: 152px;
-		margin-bottom: 100px;
-	}
-
-	&__content {
-		max-width: 600px;
-		width: 100%;
-	}
-
-	&__descr {
-		margin: 0;
-	}
-}
-
-.breadcrumbs {
-	display: flex;
-	margin-bottom: 40px;
-	column-gap: 22px;
-
-	&__item {
-		position: relative;
-
-		&:not(:last-child) {
-			&::after {
-				content: "/";
-				position: absolute;
-				top: 0;
-				right: -14px;
-				color: $gray-600;
-			}
-		}
-	}
-
-	&__link {
-		color: $gray-800;
-
-		&:not([href]) {
-			color: $gray-600;
-		}
 	}
 }

@@ -1,0 +1,66 @@
+.swpr {
+	position: relative;
+
+	&--projects {
+		padding-top: 60px;
+	}
+
+	&__nav {
+		position: absolute;
+
+		&--projects {
+			top: -35px;
+			right: -12px;
+		}
+		&--clients {
+			bottom: 0;
+			right: 0;
+			z-index: 100;
+		}
+	}
+
+	&__btn {
+		width: 48px;
+		height: 48px;
+		border-radius: 100%;
+		transition: all 0.3s ease-in-out;
+		& svg {
+			fill: $gray-900;
+		}
+
+		&:hover {
+			background-color: $primary;
+			& svg {
+				fill: $white;
+			}
+		}
+
+		&--work-item {
+			position: absolute;
+			top: calc(50% - 24px);
+			background-color: $white;
+			opacity: 0.5;
+			z-index: 2;
+
+			&-prev {
+				left: 20px;
+			}
+			&-next {
+				right: 20px;
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__content {
+		&--projects {
+			margin: -5px -25px -80px -15px;
+			padding: 5px 25px 80px 15px;
+		}
+	}
+	&__slide {
+		cursor: pointer;
+	}
+}

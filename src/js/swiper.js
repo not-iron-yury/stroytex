@@ -8415,17 +8415,16 @@ var Swiper = (function () {
 })();
 //# sourceMappingURL=swiper-bundle.min.js.map
 
-const swiperHomePageProjects = new Swiper("#slider-1", {
+const swiperHomePageProjects = new Swiper("#slider-projects", {
 	slidesPerView: 3,
 	spaceBetween: 30,
 	loop: true,
 
 	navigation: {
-		nextEl: "#slider-1--next",
-		prevEl: "#slider-1--prev",
+		nextEl: "#slider-projects--next",
+		prevEl: "#slider-projects--prev",
 	},
 });
-
 
 const clientsSlider= new Swiper("#clients-slider", {
 	slidesPerView: 1,

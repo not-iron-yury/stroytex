@@ -36,10 +36,10 @@ if (video) {
 		video.querySelector("button").remove();
 	});
 }
-
 /*---------------------/video----------------------*/
 
-/*--------------------subscribe--------------------*/
+
+/*----------------subscribe-in-footer--------------*/
 const buttonSubscribe = document.getElementById('btn-subscribe');
 
 switchButtonSubscribe();
@@ -54,13 +54,11 @@ function switchButtonSubscribe() {
 	buttonSubscribe.textContent = 'Подписаться'
 	buttonSubscribe.classList.remove('footer-subscribe__btn--small');
 	}
-
 }
+/*---------------/subscribe-in-footer--------------*/
 
-/*-------------------/subscribe--------------------*/
 
-
-/*----------------------goTop----------------------*/
+/*-------------------goTop-button------------------*/
 const gotopBtn = document.getElementById("gotop-btn");
 
 gotopBtn.addEventListener("click", () => {
@@ -69,12 +67,13 @@ gotopBtn.addEventListener("click", () => {
 		behavior: "smooth",
 	});
 });
-/*---------------------/goTop----------------------*/
+/*-------------------/goTop-button-----------------*/
+
 
 /*-------------------offer-details-----------------*/
-const offerDetails = document.querySelectorAll('.offer__details');
+const offerDetails = document.querySelectorAll('.weoffer details');
 
-if(offerDetails) {
+if(offerDetails.length > 0) {
 	offerDetails.forEach(el => {
 		el.addEventListener('click', toggleDetails);
 	})
@@ -92,16 +91,20 @@ if(offerDetails) {
 }
 /*------------------/offer-details-----------------*/
 
+
 /*------------------projects-work------------------*/
+
+// табы (фильтр карточек проектов)
 const tabsButtons = document.querySelectorAll('.project-tabs__btn');
 
-if (tabsButtons > 0) {
+if (tabsButtons.length > 0) {
 	
 	// все карточки проектов
 	const projectCardsAll = document.querySelectorAll(".project-grid__item");
 	
 	// кнопка подгрузки карточек проектов
 	const moreButton = document.getElementById('project-grid__more-btn');
+
 	
 	// стартовое значение видимых карточек
 	const prevCountCards = 3;
@@ -135,7 +138,6 @@ if (tabsButtons > 0) {
 		},
 	};
 	Object.preventExtensions(filterType);
-
 
 	// отображение списка проектов при первой загрузке страницы
 	filteredListProjects('all', prevCountCards);

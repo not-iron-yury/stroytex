@@ -6,6 +6,8 @@
 @import "./UI/forms";
 @import "./UI/white-block";
 @import "./UI/view-more";
+@import "./UI/sliders";
+@import "./UI/breadcrumbs";
 
 /* Blocks */
 @import "./blocks/header";
@@ -19,7 +21,10 @@
 @import "./blocks/weoffer";
 @import "./blocks/wedoit";
 @import "./blocks/discuss";
-@import "./blocks/projects";
+@import "./blocks/project-card";
+@import "./blocks/project-tabs";
+@import "./blocks/project-grid";
+@import "./blocks/projects-section";
 @import "./blocks/partners";
 @import "./blocks/clients";
 @import "./blocks/news";

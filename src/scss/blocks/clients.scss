@@ -5,22 +5,18 @@
 	&--homepage {
 		padding-top: 140px;
 	}
-
 	&__container {
 		display: flex;
 		justify-content: space-between;
 		position: relative;
 		top: 30px;
 	}
-
 	&__content {
 		max-width: 600px;
 	}
-	&__picture {
-	}
-	&__slider {
-		position: relative;
-	}
+}
+
+.feedback-card {
 	&__photo {
 		display: flex;
 		align-items: center;
@@ -46,11 +42,4 @@
 	&__position {
 		max-width: 480px;
 	}
-}
-
-.clients-slider__nav {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	z-index: 100;
 }

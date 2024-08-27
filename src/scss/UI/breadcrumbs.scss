@@ -1,0 +1,27 @@
+.breadcrumbs {
+	display: flex;
+	margin-bottom: 40px;
+	column-gap: 22px;
+
+	&__item {
+		position: relative;
+
+		&:not(:last-child) {
+			&::after {
+				content: "/";
+				position: absolute;
+				top: 0;
+				right: -14px;
+				color: $gray-600;
+			}
+		}
+	}
+
+	&__link {
+		color: $gray-800;
+
+		&:not([href]) {
+			color: $gray-600;
+		}
+	}
+}
