@@ -8415,6 +8415,8 @@ var Swiper = (function () {
 })();
 //# sourceMappingURL=swiper-bundle.min.js.map
 
+
+//-------------------------------------------------------------//
 const swiperHomePageProjects = new Swiper("#slider-projects", {
 	slidesPerView: 3,
 	spaceBetween: 30,
@@ -8425,7 +8427,7 @@ const swiperHomePageProjects = new Swiper("#slider-projects", {
 		prevEl: "#slider-projects--prev",
 	},
 });
-
+//-------------------------------------------------------------//
 const clientsSlider= new Swiper("#clients-slider", {
 	slidesPerView: 1,
 	loop: true,
@@ -8434,12 +8436,24 @@ const clientsSlider= new Swiper("#clients-slider", {
 		prevEl: "#clients-slider--prev",
 	},
 });
+//-------------------------------------------------------------//
+const workNavSlider= new Swiper("#work-nav", {
+	loop: true,
+	spaceBetween: 10,
+	slidesPerView: 10,
+	freeMode: true,
+	watchSlidesProgress: true,
+});
 
-const workItemSlider= new Swiper("#slider-work-item", {
+const workItemSlider= new Swiper("#work-items", {
 	slidesPerView: 1,
 	loop: true,
 	navigation: {
 		nextEl: "#work-item--next",
 		prevEl: "#work-item--prev",
 	},
+	thumbs: {
+		swiper: workNavSlider,
+	}
 });
+//-------------------------------------------------------------//

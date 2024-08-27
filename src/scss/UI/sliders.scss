@@ -1,6 +1,17 @@
 .swpr {
 	position: relative;
 
+	&--work-items {
+		margin-bottom: 20px;
+	}
+
+	&--work-nav li {
+		&:hover {
+			opacity: 0.5;
+			transition: opacity 0.25s ease-in-out;
+		}
+	}
+
 	&--projects {
 		padding-top: 60px;
 	}
