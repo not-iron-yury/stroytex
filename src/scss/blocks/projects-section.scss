@@ -1,12 +1,31 @@
 .projects-section {
-	&__title {
-		max-width: 700px;
-		margin: 0;
-	}
 	&--homepage {
 		padding: 120px 0;
 	}
 	&--services-item {
 		padding: 154px 0 100px;
+	}
+
+	&__title {
+		max-width: 700px;
+		margin: 0;
+	}
+}
+
+.swpr-projects {
+	position: relative;
+	padding-top: 60px;
+
+	&__nav {
+		position: absolute;
+		top: -35px;
+		right: -12px;
+	}
+	&__content {
+		margin: -5px -25px -80px -15px;
+		padding: 5px 25px 80px 15px;
+	}
+	&__slide {
+		cursor: pointer;
 	}
 }
